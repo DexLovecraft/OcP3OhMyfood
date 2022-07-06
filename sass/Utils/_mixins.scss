@@ -1,0 +1,10 @@
+@mixin center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+@mixin shadow($Y : $shadow__Y, $opacity : $shadow__opacity) {
+    box-shadow: 0px $Y 15px  0px $opacity;
+}
