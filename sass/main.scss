@@ -1,26 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,100&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap');
 
-$primary: #9356DC;
-$secondary: #FF79DA;
-$tertiary: #99E2D0;
-$background--light: #F6F6F6;
-
-$shadow__Y: 6px;
-$shadow__Y--short: 1px; 
-$shadow__opacity: rgba(0,0,0,0.4);
-$shadow__opacity--short: rgba(0,0,0,0.25);
-
-@mixin center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-}
-
-@mixin shadow($Y : $shadow__Y, $opacity : $shadow__opacity) {
-    box-shadow: 0px $Y 15px  5px $opacity;
-}
+@import "./Utils/variables";
+@import "./Utils/mixins";
+@import "./Components/components";
 
 html, body{
     margin: 0;
@@ -49,5 +32,59 @@ html, body{
     &__icon{
         position: relative;
         right: 8%;
+    }
+}
+
+.welcome{
+    background: $background;
+    height: 340px;
+    @include center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 50px;
+}
+
+.subtitle{
+    font-weight: 300;
+    color: lighten(#000 ,40%);
+    margin:-10px 0 35px 0;
+}
+
+.fonctionement{
+    padding: 30px;
+}
+
+.step{
+    background-color: $background;
+    display: flex;
+    align-items: center;
+    width: 95%;
+    height: 85px;
+    @include shadow;
+    border-radius: 18px / 30px;
+    margin-bottom: 25px;
+    &__number{
+        background: $primary;
+        height: 30px;
+        width: 30px;
+        border-radius: 30px;
+        @include center;
+        margin: 0;
+        position: relative;
+        right: 3.5%;
+        color: $white;
+    }
+    &__text{
+        @include center;
+    }
+    &__icon{
+        margin: 0 10px 0 3px;
+        color: transparentize(#000000, $amount: 0.4);
+        &--purple{
+            color: $primary;
+        }
+    }
+    &--purple{
+        background: transparentize($primary, 0.8);
     }
 }
