@@ -4,7 +4,7 @@
   "description": "Site d'OhMyFood pour le projet 3 d'openclassroom",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./scss/main.scss:./public/css/stylecss --style compressed"
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style compressed"
   },
   "repository": {
     "type": "git",
