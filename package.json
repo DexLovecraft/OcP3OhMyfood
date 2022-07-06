@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "Site d'OhMyFood pour le projet 3 d'openclassroom",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./scss/main.scss:./public/css/stylecss --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DexLovecraft/OcP3OhMyfood.git"
+  },
+  "author": "Alex Balmes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DexLovecraft/OcP3OhMyfood/issues"
+  },
+  "homepage": "https://github.com/DexLovecraft/OcP3OhMyfood#readme"
+}
