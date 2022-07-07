@@ -6,7 +6,7 @@
 .button{
     padding: 0 10%;
     border-radius: 50px;
-    background: linear-gradient(354deg, $primary 5%, $secondary 100%);
+    background: linear-gradient($gradient);
     text-decoration: none;
     @include shadow;
     &__text{
