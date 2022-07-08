@@ -9,9 +9,10 @@
     background: linear-gradient($gradient);
     text-decoration: none;
     @include shadow;
+    scroll-behavior: smooth;
     &:hover{
         animation: button-hover;
-        animation-duration: 200ms;
+        animation-duration: 150ms;
         animation-fill-mode: both;
     }
     &__text{
