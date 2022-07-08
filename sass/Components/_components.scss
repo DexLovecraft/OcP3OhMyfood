@@ -9,7 +9,21 @@
     background: linear-gradient(354deg, $primary 5%, $secondary 100%);
     text-decoration: none;
     @include shadow;
+    &:hover{
+        animation: button-hover;
+        animation-duration: 200ms;
+        animation-fill-mode: both;
+    }
     &__text{
         color: $white;
+    }
+}
+
+@keyframes button-hover{
+    0%{
+    }
+    100%{
+        filter:brightness(120%);
+        @include shadow($shadow__Y, $shadow__opacity--short);
     }
 }
