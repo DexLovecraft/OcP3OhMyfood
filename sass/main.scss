@@ -199,7 +199,7 @@ body{
             opacity: 0;
             &:active{
                 animation-name: heart;
-                animation-duration: 350ms;
+                animation-duration: 200ms;
                 animation-fill-mode: forwards;
             }
         }
