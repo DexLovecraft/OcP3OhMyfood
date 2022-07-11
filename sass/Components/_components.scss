@@ -9,7 +9,6 @@
     background: linear-gradient($gradient);
     text-decoration: none;
     @include shadow;
-    scroll-behavior: smooth;
     &:hover{
         animation: button-hover;
         animation-duration: 150ms;
