@@ -8,3 +8,8 @@
 @mixin shadow($Y : $shadow__Y, $opacity : $shadow__opacity) {
     box-shadow: 0px $Y 15px  0px $opacity;
 }
+
+@mixin second-title {
+    font-family: "Shrikhand", sans-serif;
+    font-weight: lighter;
+}
