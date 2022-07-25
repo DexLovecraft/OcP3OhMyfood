@@ -1,0 +1,125 @@
+.topmenu{
+    height: 300px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    &--palette{
+        background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+        background-size: cover;
+    }
+    &--note{
+        background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+        background-size: cover;
+    }
+    &--francaise{
+        background-image: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+        background-size: cover;
+    }
+    &--delice{
+        background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+        background-size: cover;
+    }
+    &__bottom{
+        grid-area: 7 / 1 / 9 / 10;
+        background: $background;
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: repeat(3, 33%);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        border-radius:  $card-border $card-border 0 0;
+    } 
+    &__title{
+        grid-area: 2 / 1 / 3 / 8;
+        margin: 0 0 0 20px;
+        font-size: 120%;
+    }
+    &__icon{
+        grid-area: 2 / 8 / 3 / 9;
+    }
+}
+
+.main{
+    &--menu{
+        padding: 0 20px 45px 20px;
+        background: $background;
+        margin: 0;
+    }
+}
+
+.dishes-category{
+    margin: 0 0 25px 0;
+    font-weight: 300;
+    font-size: 100%;
+    &__underline{
+        border-bottom: $tertiary 3px solid;
+    }
+}
+
+.card-container{
+    width: 100%;
+    height: 70px;
+    border-radius: $card-border;
+    @include shadow;
+    overflow: hidden;
+    display: flex;
+    margin-bottom: 25px;
+    @for $num from 1 to 10 {
+        &--#{$num}{
+            @include arrival($num - 1)
+        }
+    }
+    
+    &:hover{
+        & > .block-vert{
+            animation: push 2s; 
+            & > .block-vert__icon{
+                animation: rotate 2s;
+            }
+        }
+    }
+}
+
+.d-card{
+    background-color: $white;
+    width: 100%;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 0;
+    &__title{
+        @include d-card-text;
+        font-weight: 500;
+        font-size: 100%;
+    }
+}
+
+.description{
+    display: flex;
+    justify-content: space-between;
+    &__text{
+        @include d-card-text;
+        font-weight: 300;
+        font-size: 90%;
+    }
+    &__price{
+        margin: 0;
+        font-weight: 700;
+
+    }
+}
+
+.block-vert{
+    background: $tertiary;
+    width: 0px;
+    max-width: 70px;
+    @include center; 
+    margin: 0;
+    &__icon{
+        color: $white;
+    } 
+}

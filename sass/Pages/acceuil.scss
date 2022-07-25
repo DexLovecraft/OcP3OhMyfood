@@ -1,0 +1,157 @@
+.loader{
+    height: 120vh;
+    width: 100vw;
+    background: linear-gradient($gradient);
+    position: fixed;
+    z-index: 99;
+    @include center;
+    animation: loader__background 450ms 1.4s both;
+    transform-origin: 50% 0;
+    &::after {
+        content: " ";
+        display: block;
+        width: 64px;
+        height: 64px;
+        margin: 8px;
+        border-radius: 50%;
+        border: 8px solid;
+        border-color: $tertiary transparent $tertiary transparent;
+        animation: loader 1.2s linear both;
+      }
+}
+
+.localisation{
+    background-color: #EAEAEA;
+    @include center;
+    position: relative;
+    z-index: -1;
+    color: darken(#EAEAEA, 65%);
+    &__text{
+        font-weight: 500;
+    }
+    &__icon{
+        margin-right: 5px;
+    }
+}
+
+.welcome{
+    background: $background;
+    height: 340px;
+    @include center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 50px;
+}
+
+.subtitle{
+    font-weight: 300;
+    color: lighten(#000 ,40%);
+    margin:-10px 0 35px 0;
+}
+
+.fonctionement{
+    padding: 30px;
+}
+
+.step{
+    background-color: $background;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 85px;
+    @include shadow;
+    border-radius: 18px / 30px;
+    margin-bottom: 25px;
+    &__number{
+        background: $primary;
+        height: 30px;
+        width: 30px;
+        border-radius: 30px;
+        @include center;
+        margin: 0;
+        position: relative;
+        right: 3.5%;
+        color: $white;
+    }
+    &__text{
+        @include center;
+    }
+    &__icon{
+        margin: 0 10px 0 3px;
+        color: transparentize(#000000, $amount: 0.4);
+        &--purple{
+            color: $primary;
+        }
+    }
+    &--purple{
+        background: transparentize($primary, 0.8);
+    }
+}
+
+.restaurants{
+    padding: 30px;
+    background: $background;
+}
+
+.card{
+    border-radius: $card-border;
+    background: $white;
+    height: 250px;
+    display: grid;
+    grid-template-columns: repeat(7, 14%) 2.2%;
+    grid-template-rows: 3% repeat(6, 10%) 5%  15% 15%;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding: 0;
+    @include shadow;
+    margin-bottom: 25px;
+    cursor: pointer;
+    &__img{
+        width: 100%;
+        height: 100%;
+        border-radius: $card-border $card-border 0 0 ;
+        grid-area: 1 / 1 / 8 / 9;
+        object-fit: cover;
+    }
+    &__new{
+        background: $tertiary;
+        color: darken($tertiary, 35%);
+        grid-area: 2 / 6 / 3 / 8;
+        font-size: 85%;
+        @include center;
+        margin: auto;
+        padding: 0 10% 0 10%;
+        height: 70%;
+    }
+    &__title{
+        grid-area: 9 / 1 / 10 / 8;
+        margin: 0 10px;
+        font-size: 130%;
+        word-wrap: break-word;
+    }
+    &__text{
+        grid-area: 10 / 1 / 11 / 8;
+        margin : 0 10px;
+    }
+}
+
+.hearticon{
+    @include center;
+    grid-area: 9 / 7 / 10 / 8;
+    font-size: $heart-size;
+    &--full{
+        @include center;
+        font-size: $heart-size;
+        grid-area: 9 / 7 / 10 / 8;
+        background: -webkit-linear-gradient(354deg, $primary 5%, $secondary 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transform-origin: 50% 100%;
+        opacity: 0;
+        &:hover{
+            animation-name: heart;
+            animation-duration: 200ms;
+            animation-fill-mode: both;
+        }
+    }
+}

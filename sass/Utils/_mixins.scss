@@ -5,13 +5,13 @@
     margin: auto;
 }
 
-@mixin shadow($Y : $shadow__Y, $opacity : $shadow__opacity) {
-    box-shadow: 0px $Y 15px  0px $opacity;
-}
-
-@mixin second-title {
+@mixin second-title{
     font-family: "Shrikhand", sans-serif;
     font-weight: lighter;
+}
+
+@mixin shadow($Y : $shadow__Y, $opacity : $shadow__opacity) {
+    box-shadow: 0px $Y 15px  0px $opacity;
 }
 
 @mixin d-card-text{
@@ -26,8 +26,4 @@
 @mixin arrival ($num : 0){
     animation: arrival 250ms cubic-bezier(.4,0,.8,1) calc(250ms * $num)1  both;
     transform-origin: 0 100%;
-}
-
-@mixin shadow-anim ($delay : 0){
-    animation: shadow 300ms calc( 1300ms * 3 * $delay) both;
 }

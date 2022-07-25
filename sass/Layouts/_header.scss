@@ -1,0 +1,17 @@
+.header{
+    padding: 4%;
+    @include shadow($shadow__Y--short,$shadow__opacity--short);
+    &__logo{
+        @include center;
+    }
+    &--menu{
+        display: flex;
+        &__link{
+            @include center;
+            margin: auto -5px;
+        }
+        &__icon{
+            font-size: 120%;
+        }
+    }
+}

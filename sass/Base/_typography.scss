@@ -1,0 +1,12 @@
+html, body{
+    font-family:"roboto", sans-serif;
+}
+
+.title{
+    font-size: 1.5em;
+    font-weight: 700;
+    &--menu{
+        font-family: "Shrikhand", sans-serif;
+        font-weight: lighter;
+    }
+}
