@@ -216,10 +216,10 @@ a{
         -webkit-text-fill-color: transparent;
         transform-origin: 50% 100%;
         opacity: 0;
-        &:active{
+        &:hover{
             animation-name: heart;
             animation-duration: 200ms;
-            animation-fill-mode: forwards;
+            animation-fill-mode: both;
         }
     }
 }
