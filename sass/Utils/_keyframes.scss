@@ -54,3 +54,27 @@
         opacity: 1;
     }
 }
+
+@keyframes push {
+    0%{
+        width: 0px;
+    } 
+    45%,55%{
+        width: 85px;
+    }
+    100%{
+        width: 0;
+    }
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    35%{
+        transform: rotate(720deg);
+    }
+    100%{
+        transform: rotate(720deg);
+    }
+}
