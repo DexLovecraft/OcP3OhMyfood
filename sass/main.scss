@@ -317,7 +317,12 @@ a{
     overflow: hidden;
     display: flex;
     margin-bottom: 25px;
-    &--1{
+    @for $num from 1 to 10 {
+        &--#{$num}{
+            @include arrival($num - 1)
+        }
+    }
+    /*&--1{
         @include arrival();
     }
     &--2{
@@ -346,7 +351,7 @@ a{
     }
     &--10{
         @include arrival(9)
-    }
+    }*/
     &:hover{
         & > .block-vert{
             animation: push 2s; 
