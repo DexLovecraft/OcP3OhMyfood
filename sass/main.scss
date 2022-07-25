@@ -322,36 +322,7 @@ a{
             @include arrival($num - 1)
         }
     }
-    /*&--1{
-        @include arrival();
-    }
-    &--2{
-        @include arrival(1);
-    }
-    &--3{
-        @include arrival(2);
-    }
-    &--4{
-        @include arrival(3);
-    }
-    &--5{
-        @include arrival(4);
-    }
-    &--6{
-        @include arrival(5);
-    }
-    &--7{
-        @include arrival(6);
-    }
-    &--8{
-        @include arrival(7);
-    }
-    &--9{
-        @include arrival(8);
-    }
-    &--10{
-        @include arrival(9)
-    }*/
+    
     &:hover{
         & > .block-vert{
             animation: push 2s; 
