@@ -6,6 +6,12 @@
     grid-template-rows: repeat(8, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    @include tablet{
+        height: 500px;
+    }
+    @include pc{
+        height: 600px;
+    }
     &--palette{
         background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
         background-size: cover;
@@ -31,7 +37,7 @@
         grid-column-gap: 0px;
         grid-row-gap: 0px;
         border-radius:  $card-border $card-border 0 0;
-    } 
+        } 
     &__title{
         grid-area: 2 / 1 / 3 / 8;
         margin: 0 0 0 20px;
@@ -39,6 +45,9 @@
     }
     &__icon{
         grid-area: 2 / 8 / 3 / 9;
+        @include pc{
+            grid-area: 2 / 9 / 3 / 10;
+        }
     }
 }
 
@@ -47,6 +56,9 @@
         padding: 0 20px 45px 20px;
         background: $background;
         margin: 0;
+        @include pc{
+            margin-top: -5px;
+        }
     }
 }
 
@@ -67,7 +79,10 @@
     overflow: hidden;
     display: flex;
     margin-bottom: 25px;
-    @for $num from 1 to 10 {
+    @include pc{
+        height: 140px;
+    }
+    @for $num from 1 to 11 {
         &--#{$num}{
             @include arrival($num - 1)
         }
@@ -91,6 +106,10 @@
     flex-direction: column;
     justify-content: space-between;
     min-width: 0;
+    @include pc{
+        height: 120px;
+        font-size: 120%;
+    }
     &__title{
         @include d-card-text;
         font-weight: 500;
