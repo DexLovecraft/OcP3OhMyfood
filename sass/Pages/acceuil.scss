@@ -102,7 +102,7 @@
     @include tablet{
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 }
 
@@ -123,7 +123,11 @@
         width: 49%;
     }
     @include pc{
-        height: 500px;
+        width: 49%;
+    }
+    @include wide{
+        width: 24%;
+        height: 400px;
     }
     &__img{
         width: 100%;
@@ -141,16 +145,28 @@
         margin: auto;
         padding: 0 10% 0 10%;
         height: 70%;
+        @include wide{
+            grid-area: 2 / 5 / 3 / 7;
+        }
+        @include pc{
+            grid-area: 2 / 6 / 3 / 8;
+        }
     }
     &__title{
         grid-area: 9 / 1 / 10 / 8;
         margin: 0 10px;
         font-size: 130%;
         word-wrap: break-word;
+        @include pc{
+            font-size: 125%;
+        }
     }
     &__text{
         grid-area: 10 / 1 / 11 / 8;
         margin : 0 10px;
+        @include pc{
+            font-size: 125%;
+        }
     }
 }
 
