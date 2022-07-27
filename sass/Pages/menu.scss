@@ -109,11 +109,15 @@
     @include pc{
         height: 120px;
         font-size: 120%;
+        justify-content: space-around
     }
     &__title{
         @include d-card-text;
         font-weight: 500;
         font-size: 100%;
+        @include pc{
+            height: 30px;
+        }
     }
 }
 
@@ -124,6 +128,9 @@
         @include d-card-text;
         font-weight: 300;
         font-size: 90%;
+        @include pc{
+            height: 30px;
+        }
     }
     &__price{
         margin: 0;

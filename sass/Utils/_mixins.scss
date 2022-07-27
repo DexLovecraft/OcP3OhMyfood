@@ -39,3 +39,9 @@
         @content;
     }
 }
+
+@mixin wide{
+    @media screen and (min-width : map-get($responsive, wide)) {
+        @content;
+    }
+}
