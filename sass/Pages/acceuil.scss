@@ -70,8 +70,14 @@
         @include center;
         margin: 0;
         position: relative;
-        right: 3.5%;
+        right: 2.5%;
         color: $white;
+        @include tablet{
+            right: 1.5%
+        }
+        @include pc{
+            right: 0.5%;
+        }
     }
     &__text{
         @include center;
@@ -91,6 +97,13 @@
 .restaurants{
     padding: 30px;
     background: $background;
+    display: flex;
+    flex-direction: column;
+    @include tablet{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 }
 
 .card{
@@ -106,6 +119,16 @@
     @include shadow;
     margin-bottom: 25px;
     cursor: pointer;
+    @include tablet{
+        width: 49%;
+    }
+    @include pc{
+        width: 49%;
+    }
+    @include wide{
+        width: 24%;
+        height: 400px;
+    }
     &__img{
         width: 100%;
         height: 100%;
@@ -122,16 +145,28 @@
         margin: auto;
         padding: 0 10% 0 10%;
         height: 70%;
+        @include wide{
+            grid-area: 2 / 5 / 3 / 7;
+        }
+        @include pc{
+            grid-area: 2 / 6 / 3 / 8;
+        }
     }
     &__title{
         grid-area: 9 / 1 / 10 / 8;
         margin: 0 10px;
         font-size: 130%;
         word-wrap: break-word;
+        @include pc{
+            font-size: 125%;
+        }
     }
     &__text{
         grid-area: 10 / 1 / 11 / 8;
         margin : 0 10px;
+        @include pc{
+            font-size: 125%;
+        }
     }
 }
 

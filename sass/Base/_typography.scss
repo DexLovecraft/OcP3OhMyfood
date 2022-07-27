@@ -1,5 +1,11 @@
 html, body{
     font-family:"roboto", sans-serif;
+    @include tablet{
+        font-size: 105%;
+    }
+    @include pc{
+        font-size: 115%;
+    }
 }
 
 .title{
@@ -7,5 +13,8 @@ html, body{
     font-weight: 700;
     &--menu{
         @include second-title;
+    }
+    &--restau{
+        width: 100%;
     }
 }
