@@ -132,9 +132,10 @@
     }
     &__text{
         @include center;
+        margin-left: 15px;
     }
     &__icon{
-        margin: 0 10px 0 3px;
+        margin: 0 0 0 10px;
         color: transparentize(#000000, $amount: 0.4);
         &--purple{
             color: $primary;
@@ -160,10 +161,10 @@
 .card{
     border-radius: $card-border;
     background: $white;
-    height: 250px;
+    height: 230px;
     display: grid;
     grid-template-columns: repeat(7, 14%) 2.2%;
-    grid-template-rows: 3% repeat(6, 10%) 5%  15% 15%;
+    grid-template-rows: 3% repeat(6, 10.5%) 5%  13.5% 13.5%;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     padding: 0;
@@ -194,7 +195,7 @@
         font-size: 85%;
         @include center;
         margin: auto;
-        padding: 0 10% 0 10%;
+        padding: 5% 10%;
         height: 70%;
         @include wide{
             grid-area: 2 / 5 / 3 / 7;
@@ -206,6 +207,8 @@
     &__title{
         grid-area: 9 / 1 / 10 / 8;
         margin: 0 10px;
+        height: 25px;
+        padding: 0 0 -10px 0;
         font-size: 130%;
         word-wrap: break-word;
         @include pc{
@@ -215,6 +218,7 @@
     &__text{
         grid-area: 10 / 1 / 11 / 8;
         margin : 0 10px;
+        font-weight: 300;
         @include pc{
             font-size: 125%;
         }
